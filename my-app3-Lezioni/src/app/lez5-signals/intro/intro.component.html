@@ -1,0 +1,17 @@
+<h2>Intro</h2>
+
+<div>
+    <button (click)="onSelectRespo()">
+        <!-- Anche le proprietà vanno modificate -->
+        <!-- <span> {{selectedRespo.nome}} {{selectedRespo.cognome}}</span> -->
+        <span> 
+            {{selectedRespo().nome}}
+            {{selectedRespo().cognome}}
+            <img 
+            src="{{imagePath()}} " 
+            alt=""
+            width="50px"
+            height="auto">
+        </span>
+    </button>
+</div>
