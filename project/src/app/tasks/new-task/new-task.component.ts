@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { type NewTask } from '../task/task.model';
+import { CardComponent } from "../../shared/card/card.component";
 
 @Component({
   selector: 'app-new-task',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CardComponent],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css'
 })
@@ -20,6 +21,9 @@ export class NewTaskComponent {
   
   isInvalid: boolean = false;
 
+  constructor(){
+
+  }
   onClose() {
     this.close.emit();
   }
@@ -30,7 +34,6 @@ export class NewTaskComponent {
     if(this.enteredTitle == undefined || this.enteredSummary == undefined || this.enteredDate == undefined){
       // faremo comparire degli avvisi
       this.isInvalid = true;
-
     }
     else{
       //emetto un nuovo task
