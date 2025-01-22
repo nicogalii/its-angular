@@ -1,0 +1,23 @@
+{
+  "courses": [
+      {
+          "id": 1,
+          "name": "Yoga",
+          "description": "Un corso rilassante di yoga.",
+          "instructor": "Anna Rossi",
+          "duration": "1 ora",
+          "capacity": 10,
+          "enrolled": 5
+      },
+      {
+          "id": 2,
+          "name": "Pilates",
+          "description": "Allenamento muscolare e posturale.",
+          "instructor": "Marco Bianchi",
+          "duration": "1 ora",
+          "capacity": 8,
+          "enrolled": 6
+      }
+  ],
+  "bookings": []
+}
