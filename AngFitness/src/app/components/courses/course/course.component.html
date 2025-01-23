@@ -1,1 +1,15 @@
-
+<div>
+  <h2>{{ course().name }}</h2>
+  <p>{{ course().description }}</p>
+  <p><strong>Istruttore:</strong> {{ course().instructor }}</p>
+  <p><strong>Durata:</strong> {{ course().duration }}</p>
+  <p>
+    <strong>Capacità:</strong> {{ course().actualBooking }}/{{
+      course().capacity
+    }}
+  </p>
+  <button (ngSubmit)="onSubmit(course())">prenota</button>
+</div>
+@if (selectedCourse() ) {
+<app-modal-booking [course]="selectedCourse()!"></app-modal-booking>
+}

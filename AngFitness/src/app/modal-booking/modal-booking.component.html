@@ -1,0 +1,87 @@
+<!-- modale aperta quando viene cliccato il bottone "prenota corso" -->
+<div
+  class="modal fade"
+  id="prenotazioneModal"
+  tabindex="-1"
+  aria-labelledby="prenotazioneModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="prenotazioneModalLabel">
+          Prenotazione corso: {{ course().name }}
+        </h4>
+      </div>
+      <div class="modal-body">
+        <!-- form per prenotazione del corso, validazione dei dati e del form tramite #form = "ngModel" -->
+        <form #formData="ngForm" (ngSubmit)="onSubmit(formData)">
+          <!-- input per il nome della persona che prenota -->
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nome"
+              name="nome"
+              #nome="ngModel"
+              ngModel
+              required
+            />
+          </div>
+
+          <!-- input per il cognome della persona che prenota -->
+          <div class="mb-3">
+            <label for="cognome" class="form-label">Cognome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cognome"
+              name="cognome"
+              #cognome="ngModel"
+              ngModel
+              required
+            />
+          </div>
+
+          <!-- input per l'email della persona che prenota -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              #email="ngModel"
+              ngModel
+              email
+              required
+            />
+            @if (email.invalid && email.touched) {
+            <p class="text-danger">Inserisci una email valida!</p>
+            }
+          </div>
+
+          <!-- bottoni per confermare o cancellare la richiesta di prenotazione -->
+          <div class="mt-5">
+            <button
+              type="button"
+              class="btn btn-outline-danger me-3"
+              data-bs-dismiss="modal"
+            >
+              Chiudi
+            </button>
+
+            <button
+              type="submit"
+              class="btn btn-success"
+              [disabled]="formData.invalid"
+            >
+              Conferma Prenotazione
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,7 @@
-<p>home works!</p>
-<p>Voglio le ultime 4 card</p>
+<h2>Home</h2>
+@if(isFetching()){
+<div>Caricamento utenti in corso....</div>
+}@else{ @for(course of courses() ?? []; track course.id){
+
+<app-course [course]="course"></app-course>
+}}

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { CoursesService } from './courses.service';
 import { Course } from './course/course.model';
@@ -7,16 +6,15 @@ import { CourseComponent } from './course/course.component';
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [],
+  imports: [CourseComponent],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css',
 })
-export class CoursesComponent {
+export class CoursesComponent implements OnInit {
   courses = signal<Course[] | undefined>(undefined);
   isFetching = signal(false);
 
   private destroyRef = inject(DestroyRef);
-  private httpClient = inject(HttpClient);
   private coursesService = inject(CoursesService);
 
   ngOnInit() {
@@ -34,5 +32,4 @@ export class CoursesComponent {
       subscription.unsubscribe();
     });
   }
-  onClick() {}
 }

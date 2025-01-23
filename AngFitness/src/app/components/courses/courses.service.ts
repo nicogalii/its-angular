@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable, signal } from '@angular/core';
-import { catchError, tap, throwError } from 'rxjs';
+import { inject, Injectable } from '@angular/core';
+import { catchError, throwError } from 'rxjs';
 import { Course } from './course/course.model';
 
 @Injectable({
@@ -51,5 +51,14 @@ export class CoursesService {
           );
         })
       );
+  }
+
+  updateBooking(course: Course) {
+    return this.httpClient.patch<Course>(
+      `http://localhost:3000/courses/${course.id}`,
+      {
+        actualBooking: ++course.actualBooking,
+      }
+    );
   }
 }

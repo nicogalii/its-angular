@@ -5,4 +5,5 @@ export interface Course {
   instructor: string;
   duration: string;
   capacity: number;
+  actualBooking: number;
 }
