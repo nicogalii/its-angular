@@ -1,1 +1,21 @@
-<p>courses works!</p>
+<h2>Corsi</h2>
+@if(isFetching()){
+<div>Caricamento utenti in corso....</div>
+}@else{
+<div class="row justify-content-center g-1">
+  @for(course of courses() ?? []; track course.id){
+  <div class="col-md-6 d-flex justify-content-center">
+    <div class="card" style="width: 25rem">
+      <div class="card-body">
+        <h5 class="card-title">{{ course.name }}</h5>
+        <p class="card-text">{{ course.description }}</p>
+        <p class="card-text">{{ course.instructor }}</p>
+        <p class="card-text">{{ course.duration }}</p>
+        <p class="card-text">{{ course.capacity }}</p>
+        <a href="#" class="btn btn-primary" (click)="onClick()">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+}

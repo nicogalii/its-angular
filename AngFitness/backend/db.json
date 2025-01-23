@@ -1,23 +1,85 @@
 {
   "courses": [
-      {
-          "id": 1,
-          "name": "Yoga",
-          "description": "Un corso rilassante di yoga.",
-          "instructor": "Anna Rossi",
-          "duration": "1 ora",
-          "capacity": 10,
-          "enrolled": 5
-      },
-      {
-          "id": 2,
-          "name": "Pilates",
-          "description": "Allenamento muscolare e posturale.",
-          "instructor": "Marco Bianchi",
-          "duration": "1 ora",
-          "capacity": 8,
-          "enrolled": 6
-      }
+    {
+      "id": 1,
+      "name": "Yoga",
+      "description": "Un corso rilassante di yoga.",
+      "instructor": "Anna Rossi",
+      "duration": "1 ora",
+      "capacity": 10
+    },
+    {
+      "id": 2,
+      "name": "Pilates",
+      "description": "Allenamento muscolare e posturale.",
+      "instructor": "Marco Bianchi",
+      "duration": "1 ora",
+      "capacity": 8
+    },
+    {
+      "id": 3,
+      "name": "Zumba",
+      "description": "Allenamento cardio a ritmo di musica.",
+      "instructor": "Luca Verdi",
+      "duration": "1 ora",
+      "capacity": 15
+    },
+    {
+      "id": 4,
+      "name": "CrossFit",
+      "description": "Allenamento ad alta intensità.",
+      "instructor": "Giorgia Neri",
+      "duration": "1 ora e 30 minuti",
+      "capacity": 12
+    },
+    {
+      "id": 5,
+      "name": "Spinning",
+      "description": "Allenamento su bicicletta stazionaria.",
+      "instructor": "Alessandro Ricci",
+      "duration": "45 minuti",
+      "capacity": 20
+    },
+    {
+      "id": 6,
+      "name": "Danza Moderna",
+      "description": "Lezioni di danza moderna per tutti i livelli.",
+      "instructor": "Sofia Gallo",
+      "duration": "1 ora e 15 minuti",
+      "capacity": 10
+    },
+    {
+      "id": 7,
+      "name": "Kickboxing",
+      "description": "Allenamento di arti marziali e difesa personale.",
+      "instructor": "Davide Fabbri",
+      "duration": "1 ora",
+      "capacity": 14
+    },
+    {
+      "id": 8,
+      "name": "Tai Chi",
+      "description": "Disciplina orientale per il benessere mentale e fisico.",
+      "instructor": "Elisa Colombo",
+      "duration": "1 ora",
+      "capacity": 10
+    },
+    {
+      "id": 9,
+      "name": "Body Pump",
+      "description": "Lezione per il potenziamento muscolare.",
+      "instructor": "Federico Moretti",
+      "duration": "1 ora",
+      "capacity": 12
+    },
+    {
+      "id": 10,
+      "name": "Acquagym",
+      "description": "Allenamento in acqua per tutto il corpo.",
+      "instructor": "Giulia Basile",
+      "duration": "1 ora",
+      "capacity": 18
+    }
   ],
   "bookings": []
 }
