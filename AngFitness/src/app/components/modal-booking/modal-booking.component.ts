@@ -1,6 +1,6 @@
 import { Component, inject, input } from '@angular/core';
-import { Course } from '../components/courses/course/course.model';
-import { CoursesService } from '../components/courses/courses.service';
+import { Course } from '../courses/course/course.model';
+import { CoursesService } from '../courses/courses.service';
 import { NgForm, FormsModule } from '@angular/forms';
 
 @Component({

@@ -8,8 +8,8 @@
       course().capacity
     }}
   </p>
-  <button (ngSubmit)="onSubmit(course())">prenota</button>
+  <button (ngSubmit)="onSelectCourse(course())">prenota</button>
 </div>
-@if (selectedCourse() ) {
-<app-modal-booking [course]="selectedCourse()!"></app-modal-booking>
+@if (onSelectCourse() ) {
+<app-modal-booking [course]="course()!"></app-modal-booking>
 }

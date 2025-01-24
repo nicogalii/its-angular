@@ -1,8 +1,8 @@
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, inject, input, output, signal } from '@angular/core';
 import { Course } from './course.model';
 import { NgForm } from '@angular/forms';
 import { CoursesService } from '../courses.service';
-import { ModalBookingComponent } from "../../../modal-booking/modal-booking.component";
+import { ModalBookingComponent } from '../../modal-booking/modal-booking.component';
 
 @Component({
   selector: 'app-course',
@@ -13,8 +13,9 @@ import { ModalBookingComponent } from "../../../modal-booking/modal-booking.comp
 })
 export class CourseComponent {
   course = input.required<Course>();
-  selectedCourse = signal<Course | undefined>(undefined);
-  onSubmit(course: Course) {
-    this.selectedCourse.set(course);
+  selectCourse = output<Course>();
+
+  onSelectCourse(course: Course) {
+    this.selectCourse.emit(course);
   }
 }
